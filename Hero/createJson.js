@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const GITHUB_REPO_URL = "https://github.com/Sibghataziz/The-preppy_images/blob/main";
+const GITHUB_REPO_URL = "https://github.com/Sibghataziz/The-preppy_images/blob/main/Hero";
 const IMAGES_FOLDER_PATH = path.join(__dirname);
 const SUPPORTED_IMAGE_FORMATS = [".png", ".jpg", ".jpeg", ".webp"];
 
@@ -11,9 +11,9 @@ function convertGithubToRawImageURL(githubUrl) {
     .replace("/blob/", "/");
 }
 
-function getOptimizedImageUrl(rawUrl, width = 600, quality = 75) {
+function getOptimizedImageUrl(rawUrl, width = 1000, quality = 75) {
   const strippedUrl = rawUrl.replace(/^https?:\/\//, '');
-  return `https://images.weserv.nl/?url=${encodeURIComponent(strippedUrl)}&w=${width}&output=webp&q=${quality}`;
+  return `https://images.weserv.nl/?url=${strippedUrl}&w=${width}&output=webp&q=${quality}`;
 }
 
 function generateImageLinks() {
