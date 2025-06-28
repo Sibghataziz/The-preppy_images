@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const GITHUB_REPO_URL = "https://github.com/Sibghataziz/The-preppy_images/blob/main";
+const GITHUB_REPO_URL = "https://github.com/Sibghataziz/The-preppy_images/blob/main/Product";
 const IMAGES_FOLDER_PATH = path.join(__dirname);
 const SUPPORTED_IMAGE_FORMATS = [".png", ".jpg", ".jpeg", ".webp"];
 
